@@ -8,7 +8,7 @@
 <title>Testaus!</title>
 
 <!--tuodaan three.js-->
-<script src="https://unpkg.com/three@0.126.0/build/three.js"></script>"
+<script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
 </head>
 <body>
 <!--Aktivoidaan WebXR sessio napista-->
@@ -53,7 +53,7 @@ camera.matrixAutoUpdate = false;
 
 
 const session = await navigator.xr.requestSession("immersive-ar");
-sessios.updateRenderState({
+session.updateRenderState({
       baseLayer: new XRWebGLLayer(session, gl)
 });
 // A 'local' reference space has a native origin that is located
@@ -94,12 +94,6 @@ const referenceSpace = await session.requestReferenceSpace('local');
      </body>
 
 </html>
-
-
-
-
-
-
 
 
 
